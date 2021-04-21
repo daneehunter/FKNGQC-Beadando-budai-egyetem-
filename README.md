@@ -1,0 +1,1 @@
+# FKNGQC-SzoTech-Beadand-
