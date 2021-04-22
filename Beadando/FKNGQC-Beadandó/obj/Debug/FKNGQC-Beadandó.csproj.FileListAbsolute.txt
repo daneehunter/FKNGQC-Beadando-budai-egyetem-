@@ -1,0 +1,15 @@
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\bin\Debug\FKNGQC-Beadandó.exe.config
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\bin\Debug\FKNGQC-Beadandó.exe
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\bin\Debug\FKNGQC-Beadandó.pdb
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\FKNGQC-Beadandó.csprojAssemblyReference.cache
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\MainWindow.g.cs
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\App.g.cs
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\FKNGQC-Beadandó_MarkupCompile.cache
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\FKNGQC-Beadandó_MarkupCompile.lref
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\MainWindow.baml
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\FKNGQC-Beadandó.g.resources
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\FKNGQC_Beadandó.Properties.Resources.resources
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\FKNGQC-Beadandó.csproj.GenerateResource.cache
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\FKNGQC-Beadandó.csproj.CoreCompileInputs.cache
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\FKNGQC-Beadandó.exe
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\FKNGQC-Beadandó.pdb
