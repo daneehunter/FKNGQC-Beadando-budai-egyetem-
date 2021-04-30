@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FKNGQC-Beadandó</name>
+    </assembly>
+    <members>
+        <member name="T:FKNGQC_Beadandó.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:FKNGQC_Beadandó.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:FKNGQC_Beadandó.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:FKNGQC_Beadandó.Szamlatulajdonos">
+            <summary>
+            Egy személy adatait tartalmazza
+            </summary>
+            <remarks>
+            Ez egy adat modell osztály, adattárolásra getter setterrel.
+            </remarks>
+        </member>
+        <member name="P:FKNGQC_Beadandó.Szamlatulajdonos.Neve">
+            <summary>
+            A Számla tulajdonosának nevére tárolására használt változó
+            </summary>
+        </member>
+        <member name="P:FKNGQC_Beadandó.Szamlatulajdonos.Egyenlege">
+            <summary>
+            A számla egyenlege tárolására használt változónk
+            </summary>
+        </member>
+        <member name="T:FKNGQC_Beadandó.MainWindow">
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="F:FKNGQC_Beadandó.MainWindow.Ember">
+            <summary>
+            Lista létrehozása
+            </summary>
+        </member>
+        <member name="M:FKNGQC_Beadandó.MainWindow.#ctor">
+            <summary>
+            A MainWidow létrehozza nekünk az alap két db emberünket a listába 
+            </summary>
+        </member>
+        <member name="M:FKNGQC_Beadandó.MainWindow.FeltoltesB(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            A Bal oldali gomb megnyomosávával feltölti a számlát
+            </summary>
+        </member>
+        <member name="M:FKNGQC_Beadandó.MainWindow.FeltoltesJ(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            A jobb oldali gomb megnyomásával feltölti a számlát
+            </summary>
+        </member>
+        <member name="M:FKNGQC_Beadandó.MainWindow.UtalasB(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            A Bal oldali gomb megnyomosávával átutal egyik számláról a másikra
+            </summary>
+        </member>
+        <member name="M:FKNGQC_Beadandó.MainWindow.UtalasJ(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            A jobb oldali gomb megnyomásával átutal egyik számláról a másikra
+            </summary>
+        </member>
+        <member name="M:FKNGQC_Beadandó.MainWindow.KivetB(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            A Bal oldali gomb megnyomosávával kivesz a számláról
+            </summary>
+        </member>
+        <member name="M:FKNGQC_Beadandó.MainWindow.KivetJ(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            A jobb oldali gomb megnyomásával kivesz a számláról
+            </summary>
+        </member>
+        <member name="M:FKNGQC_Beadandó.MainWindow.NevvaltasB(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            A Bal oldali gomb megnyomosávával megváltoztatja a nevet
+            </summary>
+        </member>
+        <member name="M:FKNGQC_Beadandó.MainWindow.NevvaltasJ(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            A jobb oldali gomb megnyomásával megváltoztatja a nevet
+            </summary>
+        </member>
+        <member name="M:FKNGQC_Beadandó.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:FKNGQC_Beadandó.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:FKNGQC_Beadandó.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:FKNGQC_Beadandó.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

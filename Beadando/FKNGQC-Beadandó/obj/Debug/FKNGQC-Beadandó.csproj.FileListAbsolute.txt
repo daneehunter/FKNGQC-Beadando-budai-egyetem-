@@ -13,3 +13,4 @@ C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\FKNGQC
 C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\FKNGQC-Beadandó.csproj.CoreCompileInputs.cache
 C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\FKNGQC-Beadandó.exe
 C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\obj\Debug\FKNGQC-Beadandó.pdb
+C:\Users\dani\Desktop\FKNGQC-Beadando\Beadando\FKNGQC-Beadandó\bin\Debug\FKNGQC-Beadandó.xml

@@ -23,6 +23,9 @@ namespace FKNGQC_Beadandó
         List<Szamlatulajdonos> Ember = new List<Szamlatulajdonos>();
         // Main kezdete
         //----------------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// A MainWidow létrehozza nekünk az alap két db emberünket a listába 
+        /// </summary>
         public MainWindow()
         {
             Ember.Add(
@@ -41,14 +44,11 @@ namespace FKNGQC_Beadandó
                 }
             );
             InitializeComponent();
-            /// <summary>
-            /// Számla1 infók
-            /// </summary>
+            // Itt teszem bele a Textekbe a nevet és hozzátartozó egyenleget
+            //Bal tulajdonos
             szamlatulajaB.Text = Ember[0].Neve;
             szamlaegyenlegeB.Text = Convert.ToString(Ember[0].Egyenlege);
-            /// <summary>
-            /// Számla2 infók
-            /// </summary>
+            //Jobb tulajdonos
             szamlatulajaJ.Text = Ember[1].Neve;
             szamlaegyenlegeJ.Text = Convert.ToString(Ember[1].Egyenlege);
 
@@ -59,17 +59,17 @@ namespace FKNGQC_Beadandó
 
         // Feltöltés kezdete
         //----------------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// A Bal oldali gomb megnyomosávával feltölti a számlát
+        /// </summary>
         public void FeltoltesB(object sender, RoutedEventArgs e)
         {
-            /// <summary>
-            /// Segéd változókat létrehozom a későbbiekben 
-            /// </summary>
-
+           //Segédváltozó arra,hogy szám-e az adott dolog fontos,hogy INT
             int szam;
+            //Segédváltozó a kiíratáshoz, mert nem tudom másképpen a számot kiírtani
             string segedvaltozo = bevitelimezoB.Text;
-            /// <summary>
-            /// Ellenőrzöm,hogy az adott beviteli mezőm szám ,ha igen akkor lefut a feltöltés eventem amivel nézek minden hiba lehetőséget.
-            /// </summary>
+         
+            //Ellenőrzöm,hogy az adott beviteli mezőm szám ,ha igen akkor lefut a feltöltés eventem amivel nézek minden hiba lehetőséget.
             if (Int32.TryParse(bevitelimezoB.Text, out szam) == true)
             {
                 if (Convert.ToInt32(bevitelimezoB.Text) >= 0)
@@ -96,17 +96,16 @@ namespace FKNGQC_Beadandó
             }
 
         }
+        /// <summary>
+        /// A jobb oldali gomb megnyomásával feltölti a számlát
+        /// </summary>
 
         public void FeltoltesJ(object sender, RoutedEventArgs e)
         {
-            /// <summary>
-            /// Segéd változókat létrehozom a későbbiekben 
-            /// </summary>
+ 
             int szam;
             string segedvaltozo = bevitelimezoJ.Text;
-            /// <summary>
-            /// Ellenőrzöm,hogy az adott beviteli mezőm szám ,ha igen akkor lefut a feltöltés eventem amivel nézek minden hiba lehetőséget.
-            /// </summary>
+
             if (Int32.TryParse(bevitelimezoJ.Text, out szam) == true)
             {
                 if (bevitelimezoJ.Text != "" && Convert.ToInt32(bevitelimezoJ.Text) >= 0)
@@ -133,23 +132,22 @@ namespace FKNGQC_Beadandó
 
             
         }
-
+   
         // Feltöltés vége
         //----------------------------------------------------------------------------------------------------------------------------------------------
         // Utalás kezdete
         //----------------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// A Bal oldali gomb megnyomosávával átutal egyik számláról a másikra
+        /// </summary>
         private void UtalasB(object sender, RoutedEventArgs e)
         {
             int szam;
             string segedvaltozo = bevitelimezoB.Text;
-            /// <summary>
-            /// Ellenőrzöm,hogy az adott beviteli mezőm szám ,ha igen akkor lefut a feltöltés eventem amivel nézek minden hiba lehetőséget .
-            /// </summary>
+
             if (Int32.TryParse(bevitelimezoB.Text, out szam) == true)
             {
-                /// <summary>
-                /// If ágam akkor fut le,hogy ha nagyobb, mint 0 és a bevitelimezo textem kisebb mint az adott emberem egyenlege
-                /// </summary>
+
                 if (Convert.ToInt32(bevitelimezoB.Text) >= 0 && Convert.ToInt32(bevitelimezoB.Text) <= Ember[0].Egyenlege)
                 {
                     Ember[1].Egyenlege += Convert.ToInt32(bevitelimezoB.Text);
@@ -166,7 +164,7 @@ namespace FKNGQC_Beadandó
                 }
                 else if (Convert.ToInt32(bevitelimezoB.Text) < 0)
                 {
-                    MessageBox.Show("Nem tudsz feltölteni kevesebb összeget, mint 0!");
+                    MessageBox.Show("Nem tudsz utalni kevesebb összeget, mint 0!");
                 }
             }
             else if (bevitelimezoB.Text == "")
@@ -179,18 +177,17 @@ namespace FKNGQC_Beadandó
             }
 
         }
+        /// <summary>
+        /// A jobb oldali gomb megnyomásával átutal egyik számláról a másikra
+        /// </summary>
         private void UtalasJ(object sender, RoutedEventArgs e)
         {
             int szam;
             string segedvaltozo = bevitelimezoJ.Text;
-            /// <summary>
-            /// Ellenőrzöm,hogy az adott beviteli mezőm szám ,ha igen akkor lefut a feltöltés eventem amivel nézek minden hiba lehetőséget .
-            /// </summary>
+
             if (Int32.TryParse(bevitelimezoJ.Text, out szam) == true)
             {
-                /// <summary>
-                /// If ágam akkor fut le,hogy ha nagyobb, mint 0 és a bevitelimezo textem kisebb mint az adott emberem egyenlege
-                /// </summary>
+
                 if (Convert.ToInt32(bevitelimezoJ.Text) >= 0 && Convert.ToInt32(bevitelimezoJ.Text) <= Ember[1].Egyenlege)
                 {
                     Ember[0].Egyenlege += Convert.ToInt32(bevitelimezoJ.Text);
@@ -207,7 +204,7 @@ namespace FKNGQC_Beadandó
                 }
                 else if (Convert.ToInt32(bevitelimezoJ.Text) < 0)
                 {
-                    MessageBox.Show("Nem tudsz feltölteni kevesebb összeget, mint 0!");
+                    MessageBox.Show("Nem tudsz utalni kevesebb összeget, mint 0!");
                 }
             }
             else if (bevitelimezoJ.Text == "")
@@ -225,17 +222,16 @@ namespace FKNGQC_Beadandó
         //----------------------------------------------------------------------------------------------------------------------------------------------
         // Kivét kezdete
         //----------------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// A Bal oldali gomb megnyomosávával kivesz a számláról
+        /// </summary>
         private void KivetB(object sender, RoutedEventArgs e)
         {
-            /// <summary>
-            /// Segéd változókat létrehozom a későbbiekben 
-            /// </summary>
+
 
             int szam;
             string segedvaltozo = bevitelimezoB.Text;
-            /// <summary>
-            /// Ellenőrzöm,hogy az adott beviteli mezőm szám ,ha igen akkor lefut a feltöltés eventem amivel nézek minden hiba lehetőséget.
-            /// </summary>
+
             if (Int32.TryParse(bevitelimezoB.Text, out szam) == true)
             {
                 if (Convert.ToInt32(bevitelimezoB.Text) >= 0 && Convert.ToInt32(bevitelimezoB.Text) < Ember[0].Egyenlege)
@@ -246,6 +242,7 @@ namespace FKNGQC_Beadandó
 
                     MessageBox.Show("Sikeresen kivettél: " + segedvaltozo + "Ft-ot");
                 }
+                //Kis bónusz megerősítés a kivételre
                 else if (Convert.ToInt32(bevitelimezoB.Text) == Ember[0].Egyenlege)
                 {
                    
@@ -282,17 +279,16 @@ namespace FKNGQC_Beadandó
             }
 
         }
+        /// <summary>
+        /// A jobb oldali gomb megnyomásával kivesz a számláról
+        /// </summary>
         private void KivetJ(object sender, RoutedEventArgs e)
         {
-            /// <summary>
-            /// Segéd változókat létrehozom a későbbiekben 
-            /// </summary>
+       
 
             int szam;
             string segedvaltozo = bevitelimezoJ.Text;
-            /// <summary>
-            /// Ellenőrzöm,hogy az adott beviteli mezőm szám ,ha igen akkor lefut a feltöltés eventem amivel nézek minden hiba lehetőséget.
-            /// </summary>
+ 
             if (Int32.TryParse(bevitelimezoJ.Text, out szam) == true)
             {
                 if (Convert.ToInt32(bevitelimezoJ.Text) >= 0 && Convert.ToInt32(bevitelimezoJ.Text) < Ember[1].Egyenlege)
@@ -344,49 +340,71 @@ namespace FKNGQC_Beadandó
         //----------------------------------------------------------------------------------------------------------------------------------------------
         // Név váltás kezdete
         //----------------------------------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// A Bal oldali gomb megnyomosávával megváltoztatja a nevet
+        /// </summary>
         private void NevvaltasB(object sender, RoutedEventArgs e)
         {
-            if (bevitelimezoB.Text != "")
+            int szam;
+            if (Int32.TryParse(bevitelimezoB.Text, out szam) == false)
             {
-                MessageBoxResult valasztas = MessageBox.Show("Biztos megszeretnéd változtatni a nevet?", "Ellenrözés", MessageBoxButton.YesNo);
-                switch (valasztas)
+                if (bevitelimezoB.Text != "")
                 {
-                    case MessageBoxResult.Yes:
-                        Ember[0].Neve = bevitelimezoB.Text;
-                        szamlatulajaB.Text = Ember[0].Neve;
-                        bevitelimezoB.Text = "";
-                        break;
-                    case MessageBoxResult.No:
-                        MessageBox.Show("Nem történt meg a név változtatás");
-                        break;
+                    MessageBoxResult valasztas = MessageBox.Show("Biztos megszeretnéd változtatni a nevet?", "Ellenrözés", MessageBoxButton.YesNo);
+                    switch (valasztas)
+                    {
+                        case MessageBoxResult.Yes:
+                            Ember[0].Neve = bevitelimezoB.Text;
+                            szamlatulajaB.Text = Ember[0].Neve;
+                            bevitelimezoB.Text = "";
+                            break;
+                        case MessageBoxResult.No:
+                            MessageBox.Show("Nem történt meg a név változtatás");
+                            break;
+                    }
+                }
+                else if (bevitelimezoB.Text == "")
+                {
+                    MessageBox.Show("Nem lehet üres a Beviteli Mező");
                 }
             }
-            else if (bevitelimezoB.Text == "")
+            else
             {
-                MessageBox.Show("Nem lehet üres a Beviteli Mező");
+                MessageBox.Show("Kérlek nevet adj meg!");
             }
          
         }
+        /// <summary>
+        /// A jobb oldali gomb megnyomásával megváltoztatja a nevet
+        /// </summary>
         private void NevvaltasJ(object sender, RoutedEventArgs e)
         {
-            if (bevitelimezoJ.Text != "")
+            int szam;
+            if (Int32.TryParse(bevitelimezoJ.Text, out szam) == false)
             {
-                MessageBoxResult valasztas = MessageBox.Show("Biztos megszeretnéd változtatni a nevet?", "Ellenrözés", MessageBoxButton.YesNo);
-                switch (valasztas)
+                if (bevitelimezoJ.Text != "")
                 {
-                    case MessageBoxResult.Yes:
-                        Ember[1].Neve = bevitelimezoJ.Text;
-                        szamlatulajaJ.Text = Ember[1].Neve;
-                        bevitelimezoJ.Text = "";
-                        break;
-                    case MessageBoxResult.No:
-                        MessageBox.Show("Nem történt meg a név változtatás");
-                        break;
+                    MessageBoxResult valasztas = MessageBox.Show("Biztos megszeretnéd változtatni a nevet?", "Ellenrözés", MessageBoxButton.YesNo);
+                    switch (valasztas)
+                    {
+                        case MessageBoxResult.Yes:
+                            Ember[1].Neve = bevitelimezoJ.Text;
+                            szamlatulajaJ.Text = Ember[1].Neve;
+                            bevitelimezoJ.Text = "";
+                            break;
+                        case MessageBoxResult.No:
+                            MessageBox.Show("Nem történt meg a név változtatás");
+                            break;
+                    }
+                }
+                else if (bevitelimezoJ.Text == "")
+                {
+                    MessageBox.Show("Nem lehet üres a Beviteli Mező");
                 }
             }
-            else if (bevitelimezoJ.Text == "")
+            else
             {
-                MessageBox.Show("Nem lehet üres a Beviteli Mező");
+                MessageBox.Show("Kérlek nevet adj meg!");
             }
         }
 
